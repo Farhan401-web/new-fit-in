@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FIT IN club</title>
+    <link rel="shortcut icon" href="./favicon.jpeg" type="image/x-icon">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+
+<style>
+  /* Background animation between aqua (#00ffff) and green (#008000) */
+  @keyframes bgColorShift {
+    0%, 100% { background-color: #00ffff; }
+    50% { background-color: #008000; }
+  }
+
+  html, body {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Poppins', sans-serif;
+    animation: bgColorShift 20s ease-in-out infinite;
+    color: #fff;
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: #00ffff;
+  }
+                   /*---------------------------------------------------------------------------------------------------------------*/
+  .container {
+    max-width: 1000px;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 45px auto 70px auto;
+    padding:35px 30px 40px 45px;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    text-align: center;
+  }
+
+  header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3.8rem;
+    color: #00ffff;
+    text-shadow: 2px 2px 12px #000;
+    margin-bottom: 45px;
+    user-select: none;
+  }
+         /*-------------------------------------------------------------------------------------------------------------------------------------*/
+  nav {
+    margin-bottom: 40px;
+  }
+
+  nav a {
+    color: #00ffff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 0 18px;
+    padding: 8px 16px;
+    border-radius: 13px;
+    box-shadow: 0 3px 15px #00ffff77;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    user-select: none;
+  }
+  nav a:hover, nav a:focus {
+    background-color: #00ffcc;
+    color: #004d00;
+    box-shadow: 0 0 35px #00ffcccc;
+    outline: none;
+    cursor: pointer;
+  }
+/*--------------------------------------------------------------------------------------------------------------------------*/
+  section {
+    background: rgba(0, 0, 0, 0.25);
+    margin-bottom: 55px;
+    padding: 28px 33px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #00800088;
+    transition: box-shadow 0.3s ease;
+  }
+  section:hover {
+    box-shadow: 0 0 60px #00ffccaa;
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.6rem;
+    margin-bottom: 22px;
+    color: #00ffcc;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 8px #00ffccbb;
+    user-select: text;
+  }
+/*-------------------------------------------------------------------------------------------------------------------------*/
+  p, ul {
+    font-size: 1.15rem;
+    color: #d0f0f0;
+    line-height: 1.65;
+    max-width: 900px;
+    margin: 12px auto 0 auto;
+    text-align: center;
+    user-select: text;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  ul li {
+    background: #00ffccaa;
+    color: #002800;
+    font-weight: 600;
+    padding: 14px 20px;
+    margin: 12px 0;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+  }
+  ul li:hover, ul li:focus {
+    background: #00cc99cc;
+    cursor: default;
+    outline: none;
+  }
+/*-----------------------------------------------------------------------------------------------------------------------*/
+  /* Image gallery styling */
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .image-gallery img {
+    max-width: 280px;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px #004d0099;
+    transition: transform 0.3s ease;
+    user-select: none;
+  }
+  .image-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px #00ffcccc;
+    cursor: pointer;
+  }
+          /*----------------------------------------------------------------------------------------------------------------------------------*/
+  /* Video container */
+  .video-container {
+    max-width: 900px;
+    margin: 25px auto 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 35px #00ffccaa;
+    user-select: none;
+  }
+  video {
+    width: 100%;
+    border-radius: 20px;
+    height: auto;
+  }
+/*------------------------------------------------------------------------------------------------------------------------------*/
+  .contact-info {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 18px;
+    color: #00ffcc;
+    user-select: text;
+  }
+  .contact-info a {
+    color: #00ffcc;
+    text-decoration: underline;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+  .contact-info a:hover, .contact-info a:focus {
+    color: #00994d;
+    outline: none;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #00ffcc;
+    letter-spacing: 1.5px;
+    user-select: none;
+    background: #004d00cc;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 -5px 18px #003300cc;
+  }
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+ 
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color:#067c8bcc;
+  color: white;
+  font-size: 16px;
+  resize: none;
+}
+
+.box{
+  width: 100%;
+  height: 150px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+
+  /* Responsive */
+  @media(max-width:768px){
+    nav a {
+      margin: 10px 12px;
+      font-size: 1.05rem;
+    }
+    .container {
+      padding: 35px 30px 45px 30px;
+    }
+    section {
+      padding: 22px 22px;
+    }
+    header {
+      font-size: 3rem;
+      margin-bottom: 40px;
+    }
+    .image-gallery {
+      gap: 10px;
+    }
+    .image-gallery img {
+      max-width: 90vw;
+    }
+  }
+  @media(max-width:400px){
+    nav a {
+      margin: 8px 9px;
+      font-size: 1rem;
+    }
+    header {
+      font-size: 2.6rem;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@500&display=swap');
+
+  
+  .back-button {
+    display: inline-flex;
+    position: relative; 
+    top: 30px;
+    left: 20px;
+    /* align-items: center; */
+    background: linear-gradient(135deg, #66ead4 0%, #4ba26c 100%);
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    /* font-size: 1.3rem; */
+    /* font-weight: 700; */
+     padding: 16px 40px;
+    border-radius: 50px; 
+    border: none;
+    box-shadow: 0 8px 15px rgba(75, 134, 162, 0.6);
+   
+    user-select: none;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    /* position: relative; */
+     
+  }
+
+  .back-button:hover {
+    background: linear-gradient(135deg, #4ba29e 0%, #66ddea 100%);
+    box-shadow: 0 12px 25px rgba(102, 234, 157, 0.8);
+    transform: scale(1.05);
+  }
+
+  .back-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 6px 12px rgba(102, 234, 157, 0.5);
+  }
+
+  /* Stylish left arrow icon using CSS */
+  .back-button::before {
+    content: '';
+    display: inline-block;
+    margin-right: 18px;
+    width: 14px;
+    height: 14px;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transform: rotate(-45deg);
+   
+  }
+
+  .back-button:hover::before {
+    border-color: #dcd3f5;
+  }
+  div{
+    text-align: left;
+  }
+  a{
+    text-decoration: none;
+    color: aquamarine;
+  }
+</style>
+  
+</head>
+<body>
+  <!-- <a href="../FUTURE.HTML"><button class="back-button" onclick="goBack()" aria-label="Go back to previous page">Back</button></a> -->
+  <div class="container">
+  
+  
+    
+    <header>FIT IN <br> Fitness Club</header>
+  
+
+    <nav aria-label="Primary Navigation">
+      <a href="#about">About Gym</a>
+      <a href="#owner">Owner</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Images & Videos</a>
+      <a href="#timing">Timing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" tabindex="0">
+      <h2>About the Gym</h2>
+      <p>
+      Fit In Fitness Club offers a motivating environment with welcare being strong equipment top-notch equipment and personalized training programs. We focus on your wellness and fitness journey with expert support.
+      </p>
+    </section>
+
+    <section id="owner" tabindex="0">
+      <h2>About the Owner</h2>
+      <p style="text-align: left;">
+The co-founders of FitIn are,</p>
+<div class="box">
+
+  
+    Sagar Gugaliya , he is a seasoned entrepreneur who started Shreya’s Enterprises Mobile Shop in 2005 with just one display counter on Dehuroad’s bustling Main Bazar. Two decades later, the store has grown into a trusted destination for smartphones, accessories, and after-sales service. Driven by his passion for health, Sagar diversified in 2017 by launching Fit In Fitness Club—a modern facility offering cardio, strength training, yoga, Zumba, Bollywood dance, CrossFit, and circuit sessions. His dual ventures embody his motto: “Technology in your hand, fitness in your life.”
+    <br><br>
+    Parvez Shaikh, he is a passionate fitness professional with an impressive journey that began in 2007. With nearly two decades of experience in the fitness industry, Parvez has trained, guided, and inspired hundreds of individuals to lead healthier lives. In 2017, he teamed up with his childhood friend Dilawar Khan and entrepreneur Sagar Googliya to co-found Fit In Fitness Club—a fully equipped, community-driven gym located in Vikas Nagar, Pendse Colony, Dehuroad. Parvez continues to play a hands-on role in day-to-day gym operations, fitness programming, and client transformation     
+    <br><br>
+    Dilawar Khan,he is a dynamic individual who brings the perfect balance of corporate professionalism and entrepreneurial passion. A skilled IT Manager by profession, Dilawar has always believed in the power of fitness to transform lives. In 2017, driven by a shared vision and deep-rooted friendship, he joined hands with Parvez Shaikh and Sagar Googliya—his childhood friends—to co-found Fit In Fitness Club in Dehuroad’s Vikas Nagar. Though his weekdays are spent managing tech teams, his heart lies in promoting fitness as a lifestyle and supporting the gym’s long-term growth.
+
+</div>
+      
+</section>
+
+<section id="services" tabindex="0">
+      <h2>Our Services</h2>
+      <ul>
+        <a href="./NEW_TRANERS.html"><li>Traners</li></a>
+        <a href="./NEW_YOGA_2.html"><li>Yoga</li></a>
+        <a href="./NEW_ZUMBA.html"><li>Zumba</li></a>
+        <a href="./NEW_B_DAY.html"><li>Birthday Celebration</li></a>
+       <a href="./NEW_DANCE.html"><li>Dance</li></a>
+      </ul>
+    </section>
+
+    <section id="gallery" tabindex="0">
+      <h2>Images & Videos</h2>
+
+      <div class="image-gallery" aria-label="Gym images">
+        <img src="./fit_in_img.jpg" alt="Gym Image" />
+       
+      </div>
+
+     <br>
+<video  style="height:400px;width: 100%; ;" controls>
+  <source src="./WhatsApp Video 2025-06-14 at 8.19.48 PM.mp4" >
+ 
+  Your browser does not support the video tag.
+</video> 
+<br><br>  
+<video  style="height:400px;width: 100%; ;" controls>
+  <source src="./WhatsApp Video 2025-06-14 at 8.19.46 PM.mp4  " >
+ 
+  Your browser does not support the video tag.
+</video>    </section>
+
+    <section id="timing" tabindex="0">
+      <h2>Gym Timing</h2>
+        <ul>
+        <li>Monday - Saturday: 6:00 AM - 10:00 PM</li>
+        <li>Sunday: 8:00 AM - 12:00 PM</li>
+      </ul>
+    </section>
+
+    <section id="contact" tabindex="0">
+      <h2>Contact & Joining</h2>
+      <p class="contact-info">
+        Phone: <a href="tel:+91 95294 47899">+91 95294 47899</a><br/>
+        Email: <a href="Parveznaaz8588@gmail.com">Parveznaaz8588@gmail <br>.com</a><br/>
+        Address: Pendse Colony, Vikas Nagar, Dehuroad, Pune<br/>
+        <!-- Follow us on Instagram: <a href="https://instagram.com/ultimatefitness" target="_blank" rel="noopener">@ultimatefitness</a> -->
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 FIT IN. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
